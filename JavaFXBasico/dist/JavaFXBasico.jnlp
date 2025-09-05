@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXBasico.jnlp">
+  <information>
+    <title>JavaFXBasico</title>
+    <vendor>enzor</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXBasico.jar" size="19964" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafxbasico.MainComboBox"  name="JavaFXBasico" />
+  <update check="always"/>
+</jnlp>
