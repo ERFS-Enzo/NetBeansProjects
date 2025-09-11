@@ -1,5 +1,4 @@
 package carrinho.produtos;
-
 public class Produto {
     private String nome;
     private double valor;
@@ -9,7 +8,6 @@ public class Produto {
         this.valor = valor;
     }
 
-    
     public String getNome() {
         return nome;
     }
