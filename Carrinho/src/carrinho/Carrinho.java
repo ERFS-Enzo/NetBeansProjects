@@ -9,8 +9,9 @@ public class Carrinho {
         int escolha=0;
         do{
             System.out.println("[1] Cadastrar Produto");
-            System.out.println("[2] Ver Carrinho");
-            System.out.println("[3] Sair");
+            System.out.println("[2] Remover Produto");
+            System.out.println("[3] Ver Carrinho");
+            System.out.println("[4] Sair");
             escolha=sc.nextInt();
             sc.nextLine(); //limpar o scanner
             switch(escolha){
@@ -23,7 +24,24 @@ public class Carrinho {
                     //como se eu fizesse um novo Produto p1 = new Produto(nome, valor); que estará no arraylist
                     System.out.println("Produto Cadastrado");
                     break;
-                case 2: 
+                case 2:
+                    if(produtos.isEmpty()){
+                        System.out.println("Nenhum produto cadastrado");
+                    } else{
+                        System.out.println("Escolha o numero do produto que deseja remover");
+                        for(int i =0; i < produtos.size(); i++){
+                            System.out.println("["+i+"]"+ produtos.get(i).getNome()+ "-R$ "+produtos.get(i).getValor());
+                        }
+                        int indice=sc.nextInt();
+                        if(indice >= 0 && indice < produtos.size()){
+                            Produto removido = produtos.remove(indice);
+                            System.out.println("Produto removido: " + removido.getNome());
+                        } else {
+                            System.out.println("Índice inválido!");
+                        }
+                    }
+                    break;
+                case 3: 
                     double total=0;
                     System.out.println("---Carrinho---");
                     if(produtos.isEmpty()){ //se o produto está vazio
@@ -37,13 +55,13 @@ public class Carrinho {
                     }
                     System.out.println("--------------\n");
                     break;
-                case 3:
+                case 4:
                     System.out.println("Até Logo!");
                     break;
                 default: 
                     System.out.println("ERRO! Numero Inválido.");
                     break;
             }
-        }while(escolha != 3);
+        }while(escolha != 4);
     }
 }
