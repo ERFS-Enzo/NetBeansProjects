@@ -1,4 +1,4 @@
-package treinoarraylist;
+    package treinoarraylist;
 import java.util.ArrayList;
 public class TreinoArrayList {
     public static void main(String[] args) {
