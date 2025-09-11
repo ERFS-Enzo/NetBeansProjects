@@ -6,7 +6,7 @@ public class Carrinho {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<Produto> produtos = new ArrayList<>(); //criei um arraylist da classe Produto.
-        int escolha=0;
+        int escolha;
         do{
             System.out.println("[1] Cadastrar Produto");
             System.out.println("[2] Remover Produto");
