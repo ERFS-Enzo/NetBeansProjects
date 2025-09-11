@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Carrinho {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Produto> produtos = new ArrayList<>(); //criei um arraylist da classe Produto.
+        ArrayList<Produto> produtos = new ArrayList<>(); //criar um arraylist da classe Produto.
         int escolha;
         do{
             System.out.println("[1] Cadastrar Produto");
@@ -13,7 +13,7 @@ public class Carrinho {
             System.out.println("[3] Ver Carrinho");
             System.out.println("[4] Sair");
             escolha=sc.nextInt();
-            sc.nextLine(); //limpar o scanner
+            sc.nextLine(); //limpar o buffer
             switch(escolha){
                 case 1:
                     System.out.println("Insira o Nome do Produto: ");
