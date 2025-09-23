@@ -6,7 +6,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        OrdemServico ordemServico = new OrdemServico();
         ArrayList<OrdemServico> servicos = new ArrayList<>();
         
         int escolha =0;
@@ -18,6 +17,7 @@ public class Main {
             sc.nextLine();
             switch(escolha){
                 case 1: 
+                    OrdemServico ordemServico = new OrdemServico(); //para criar um novo objeto a casa "case 1"
                     System.out.println("Informe o ID: ");
                     ordemServico.setId(sc.nextInt());
                     sc.nextLine(); //limpar buffer
@@ -38,13 +38,11 @@ public class Main {
                     
                     servicos.add(ordemServico);
                     System.out.println("Ordem de Serviço cadastrado!");
-                    
-                    
                     break;
                 case 2: 
                     System.out.println("Relação de servicos");
                     for(OrdemServico os : servicos){
-                        System.out.println(ordemServico.toString());
+                        System.out.println(os.toString());
                     }
                     System.out.println("Adeus!");
                     break;
@@ -53,12 +51,5 @@ public class Main {
                     break;
             }
         }while(escolha != 2);
-        
-        
-        
-        ordemServico.calculo();
-        //System.out.println(ordemServico.toString());
-       
     }
-
 }
