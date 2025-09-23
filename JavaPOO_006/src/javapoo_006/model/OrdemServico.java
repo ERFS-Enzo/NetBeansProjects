@@ -30,20 +30,21 @@ public class OrdemServico {
         this.valorDeslocamento = this.getValorKmDeslocamento() * this.getNroKmPercorrido();
         this.valorPagar = this.getValorServico() + this.getValorDeslocamento();
     }
-    
+
     @Override
     public String toString() {
-        return "OrdemServico{" + 
-                "id=" + id + 
-                ", nomeCliente=" + nomeCliente + 
-                ", nomeProfissional=" + nomeProfissional + 
-                ", valorServicoHora=" + valorServicoHora + 
-                ", valorKmDeslocamento=" + valorKmDeslocamento + 
-                ", nroHorasTrabalhadas=" + nroHorasTrabalhadas + 
-                ", nroKmPercorrido=" + nroKmPercorrido + 
-                ", valorServico=" + valorServico + 
-                ", valorDeslocamento=" + valorDeslocamento + 
-                ", valorPagar=" + valorPagar + '}';
+        return "\n=========OrdemServico========" + 
+                "\nid=" + id + 
+                "\nnomeCliente=" + nomeCliente + 
+                "\nnomeProfissional=" + nomeProfissional + 
+                "\nvalorServicoHora=" + valorServicoHora + 
+                "\nvalorKmDeslocamento=" + valorKmDeslocamento + 
+                "\nnroHorasTrabalhadas=" + nroHorasTrabalhadas + 
+                "\nnroKmPercorrido=" + nroKmPercorrido + 
+                "\nvalorServico=" + valorServico + 
+                "\nvalorDeslocamento=" + valorDeslocamento + 
+                "\nvalorPagar=" + valorPagar + 
+                "\n==============================\n";
     }
 
     @Override
@@ -183,6 +184,4 @@ public class OrdemServico {
     public void setValorPagar(double valorPagar) {
         this.valorPagar = valorPagar;
     }
-    
-    
 }

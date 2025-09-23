@@ -10,6 +10,7 @@ public class Main {
         
         int escolha =0;
         
+        
         do{
             System.out.println("[1]Criar ordem de serviço");
             System.out.println("[2]Sair");
@@ -41,9 +42,13 @@ public class Main {
                     break;
                 case 2: 
                     System.out.println("Relação de servicos");
+                    double faturamentoTotal =0;
                     for(OrdemServico os : servicos){
                         System.out.println(os.toString());
+                        faturamentoTotal += os.getValorPagar();
                     }
+                    System.out.println("Faturamento Total: R$ " + faturamentoTotal);
+                    System.out.println("==============================");
                     System.out.println("Adeus!");
                     break;
                 default: 
