@@ -8,9 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<OrdemServico> servicos = new ArrayList<>();
         
-        int escolha =0;
-        
-        
+        int escolha;
         do{
             System.out.println("[1]Criar ordem de serviço");
             System.out.println("[2]Sair");
@@ -18,7 +16,7 @@ public class Main {
             sc.nextLine();
             switch(escolha){
                 case 1: 
-                    OrdemServico ordemServico = new OrdemServico(); //para criar um novo objeto a casa "case 1"
+                    OrdemServico ordemServico = new OrdemServico(); //para criar um novo objeto a cada "case 1"
                     System.out.println("Informe o ID: ");
                     ordemServico.setId(sc.nextInt());
                     sc.nextLine(); //limpar buffer
