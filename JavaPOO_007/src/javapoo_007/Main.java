@@ -16,6 +16,8 @@ public class Main {
             switch(escolha){
                 case 1:
                     Paciente paciente = new Paciente();
+                    
+                    System.out.println("======CADASTRO======");
                     System.out.println("Informe o ID: ");
                     paciente.setId(sc.nextInt());
                     System.out.println("Informe a Idade: ");
@@ -25,7 +27,7 @@ public class Main {
                     paciente.setNome(sc.nextLine());
                     System.out.println("Informe o diagnostico: ");
                     paciente.setDiagnostico(sc.nextLine());
-                    
+                    System.out.println("====================");
                     pacientes.add(paciente);
                     
                     cont++;
@@ -33,15 +35,13 @@ public class Main {
                     media = idadeTotal/cont;
                     break;
                 case 2:
-                    //emitir uma relação de pacientes cadastrados no sistema (toString)
+                    System.out.println("======FINALIZANDO======");
                     for(Paciente p : pacientes){
                         System.out.println(p.toString());
                     }
-                    //informar o número de pacientes que foi cadastrado (contador)
                     System.out.println("Foram Registrados "+cont+" Pacientes");
-                    //média de idade dos pacientes atendidos
                     System.out.println("Media das Idades: "+media+" anos");
-                    
+                    System.out.println("=======================");
                     break;
             }
         }while(escolha != 2);
