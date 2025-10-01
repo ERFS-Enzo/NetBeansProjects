@@ -1,6 +1,5 @@
 package javapoo_007;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import javapoo_007.model.Paciente;
 public class Main {
